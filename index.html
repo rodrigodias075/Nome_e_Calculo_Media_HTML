@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Notas</title>
+</head>
+<body>
+    
+    <!-- <h1>EU SOU O MILIOR </h1>
+    <h2>EU SOU O MILIOR</h2>
+    <h3>EU SOU O MILIOR </h3>
+    <h4>EU SOU O MILIOR </h4>
+    <h5>EU SOU O MILIOR </h5>
+    <h6>EU SOU O MILIOR </h6> -->
+    
+    Qual o seu nome? <input type= "text" id="nome"><br>
+
+    <br><input type="button" value="Mostrar Nome" id="btnMostrarNome"><br>
+
+    <br>Primeira Nota  
+    <input type="text"><br>
+     Segunda Nota 
+     <input type="text"><br>
+     Terceira Nota 
+     <input type="text"><br>
+     Quarta Nota 
+     <input type="text"><br>
+
+    <p id="resultado"></p>
+    <p id="media"></p>
+    <br><input type="button" value="Calcular Média" id="btnCalcularMédia"><br>
+
+    <script>
+        function escreverNome(){
+            var nome = document.getElementById("nome").value
+            document.getElementById("resultado").innerHTML = nome
+        }
+        var btnMostrarNome = document.getElementById("btnMostrarNome")
+        btnMostrarNome.addEventListener("click",escreverNome)
+
+</body>
+</html>
