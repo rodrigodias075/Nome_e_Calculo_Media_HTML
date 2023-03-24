@@ -20,13 +20,13 @@
     <br><input type="button" value="Mostrar Nome" id="btnMostrarNome"><br>
 
     <br>Primeira Nota  
-    <input type="text"><br>
+    <input type="text" id = "nota1"><br>
      Segunda Nota 
-     <input type="text"><br>
+     <input type="text" id = "nota2"><br>
      Terceira Nota 
-     <input type="text"><br>
+     <input type="text" id = "nota3"><br>
      Quarta Nota 
-     <input type="text"><br>
+     <input type="text" id = "nota4"><br>
 
     <p id="resultado"></p>
     <p id="media"></p>
@@ -39,6 +39,21 @@
         }
         var btnMostrarNome = document.getElementById("btnMostrarNome")
         btnMostrarNome.addEventListener("click",escreverNome)
+    </script> 
+
+<script>
+    var btnCalcularMedia = document.getElementById("btnCalcularMédia");
+    btnCalcularMedia.addEventListener("click", function() {
+        var nota1 = parseFloat(document.getElementById("nota1").value);
+        var nota2 = parseFloat(document.getElementById("nota2").value);
+        var nota3 = parseFloat(document.getElementById("nota3").value);
+        var nota4 = parseFloat(document.getElementById("nota4").value);
+
+        var media = (nota1 + nota2 + nota3 + nota4) / 4;
+        document.getElementById("media").innerHTML = "Sua média é " + media.toFixed(2);
+    });
+ 
+</script> 
 
 </body>
 </html>
